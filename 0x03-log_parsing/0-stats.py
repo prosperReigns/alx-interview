@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import os
 
@@ -28,7 +29,7 @@ def print_codes(log):
 
     for code in sorted_code_list:
     if log["code_list"][code]:
-    print(f"{code}: {log["code_list"][code]}")
+    print(f"{code}: {log['code_list'][code]}")
 
 def main():
     regex = re.compile(r'\d{1, 3}\.\d{1, 3}\.\d{1, 3}\.\d{1, 3} - \[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d+\] "GET /projects/200 HTTP/1.1" (.{5}) (\d+)')
